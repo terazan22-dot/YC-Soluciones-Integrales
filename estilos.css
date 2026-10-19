@@ -1,14 +1,14 @@
 /* ==========================================================================
-   1. VARIABLES DE COLOR Y FUENTES (YC OBRAS)
+YC OBRAS Y SOLUCIONES INTEGRALES
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=swap');
 
 :root {
-  --navy-dark: #07192d; /* Fondo de cabecera/footer */
-  --navy-blue: #0b2545; /* Azul primario */
-  --lime-green: #7dc242; /* Verde lima del logo/detalles */
-  --whatsapp-green: #25d366; /* Verde de botones WhatsApp */
-  --bg-gray: #f4f6f8; /* Fondo claro de secciones */
+  --navy-dark: #07192d; 
+  --navy-blue: #0b2545;
+  --lime-green: #7dc242; 
+  --whatsapp-green: #25d366; 
+  --bg-gray: #f4f6f8; 
   --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   --text-dark: #12263a;
   --text-muted: #5e72e4;
@@ -108,7 +108,6 @@ body {
    2. ENCABEZADO Y BARRA DE NAVEGACIÓN (RESPONSIVE)
    ========================================================== */
 
-/* Estilos para pantallas pequeñas (992px o menos) */
 @media (max-width: 992px) {
   
   /* Ajuste de tamaño del logo */
@@ -117,7 +116,6 @@ body {
     max-width: 200px;
   }
 
-  /* Mostrar el botón hamburguesa en móviles */
   .hamburger-btn {
     display: flex;
     flex-direction: column;
@@ -138,7 +136,6 @@ body {
     transition: all 0.3s ease;
   }
 
-  /* Menú desplegable oculto por defecto */
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -149,15 +146,13 @@ body {
     align-items: center;
     padding: 25px 0;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    display: none; /* Se oculta por defecto */
+    display: none;
   }
 
-  /* Cuando se presiona la hamburguesa y JS añade la clase .active */
   .nav-menu.active {
-    display: flex; /* Muestra el menú en columna */
+    display: flex; 
   }
 
-  /* Apilar los enlaces de navegación verticalmente */
   .nav-menu ul {
     flex-direction: column;
     gap: 20px;
@@ -167,14 +162,12 @@ body {
     margin-bottom: 20px;
   }
 
-  /* Botón de WhatsApp ajustado para móvil */
   .btn-whatsapp-nav {
     width: 80%;
     justify-content: center;
   }
 }
 
-/* Ajustes adicionales para celulares muy pequeños (480px o menos) */
 @media (max-width: 480px) {
   .logo-img {
     height: 48px;
@@ -186,7 +179,6 @@ body {
    BARRA DE NAVEGACIÓN Y MENÚ HAMBURGUESA
    ========================================================== */
 
-/* Por defecto (pantallas grandes / PC): el botón hamburguesa NO se muestra */
 .hamburger-btn {
   display: none;
   background: transparent;
@@ -209,24 +201,20 @@ body {
   transition: all 0.3s ease;
 }
 
-/* RESPONSIVE PARA TABLETS Y CELULARES (Menor o igual a 992px) */
 @media (max-width: 992px) {
   
-  /* 1. Hacemos visible el botón hamburguesa */
   .hamburger-btn {
     display: flex;
   }
 
-  /* 2. Ajustamos el tamaño del logo para móviles */
   .logo-img {
     height: 50px;
     max-width: 180px;
   }
 
-  /* 3. Ocultamos el menú principal por defecto y lo convertimos en panel flotante */
   .nav-menu {
     position: absolute;
-    top: 100%; /* Justo debajo de la barra blanca del header */
+    top: 100%; 
     left: 0;
     width: 100%;
     background-color: var(--white);
@@ -234,16 +222,14 @@ body {
     align-items: center;
     padding: 30px 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    display: none; /* Oculto hasta que se presione el botón */
+    display: none; 
     z-index: 1000;
   }
 
-  /* 4. Cuando JavaScript activa la clase .active, el menú aparece */
   .nav-menu.active {
     display: flex !important;
   }
 
-  /* 5. Apilamos los elementos de la lista en columna */
   .nav-menu ul {
     flex-direction: column;
     gap: 20px;
@@ -253,7 +239,6 @@ body {
     margin: 0 0 20px 0;
   }
 
-  /* 6. Adaptamos el botón de WhatsApp para que no quede gigante en celular */
   .btn-whatsapp-nav {
     width: 100%;
     max-width: 250px;
@@ -266,7 +251,6 @@ body {
    SECCIÓN HERO / PORTADA (RESPONSIVE COMPLETO)
    ========================================================================== */
 
-/* 1. Estilos Base para Pantallas Grandes (Escritorio / Laptops) */
 .hero {
   width: 99%;
   max-width: 1240px;
@@ -280,7 +264,6 @@ body {
   box-sizing: border-box;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 
-  /* Fondo con degradado azul hacia la foto de la derecha */
   background: 
     linear-gradient(
       90deg, 
@@ -302,22 +285,20 @@ body {
   color: #ffffff;
 }
 
-/* Tagline elegante arriba del título */
 .hero-tagline {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #7dc242; /* Verde lima brillante */
+  color: #7dc242; 
   text-transform: uppercase;
-  letter-spacing: 2px; /* Aumenta el espacio entre letras para darle toque moderno */
+  letter-spacing: 2px; 
   margin-bottom: 12px;
   display: inline-block;
-  background: rgba(125, 194, 66, 0.12); /* Suave fondo translúcido verde */
+  background: rgba(125, 194, 66, 0.12); 
   padding: 4px 14px;
   border-radius: 20px;
   border: 1px solid rgba(125, 194, 66, 0.3);
 }
 
-/* Título principal con mayor presencia */
 .hero-text h1 {
   font-size: 42px;
   font-weight: 800;
@@ -327,11 +308,10 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* Estilo del subtítulo completo */
 .hero-subtitle {
-  font-family: 'Caveat', cursive; /* Fuente manuscrita como la de la imagen */
-  font-size: 2.3rem;               /* Tamaño amplio e impactante */
-  color: #ffffff;                  /* Parte inicial en blanco */
+  font-family: 'Caveat', cursive; 
+  font-size: 2.3rem;              
+  color: #ffffff;                
   font-weight: 600;
   margin-top: 10px;
   margin-bottom: 25px;
@@ -341,10 +321,9 @@ body {
   transform-origin: left center;
 }
 
-/* Destacado verde con trazo/subrayado debajo */
 .highlight-handwriting {
   font-family: inherit;
-  color: #7dc242;                  /* Verde lima igual a la imagen */
+  color: #7dc242;                 
   font-weight: 700;
   position: relative;
   display: inline-block;
@@ -380,7 +359,6 @@ body {
     z-index: -1;
 }
 
-/* Tarjetas de servicios en horizontal (Escritorio) */
 .hero-features {
   display: flex;
   gap: 15px;
@@ -421,7 +399,6 @@ body {
   margin: 0;
 }
 
-/* Botones de acción */
 .hero-buttons {
   display: flex;
   gap: 15px;
@@ -474,7 +451,6 @@ body {
   .hero {
     padding: 40px 20px;
     min-height: auto;
-    /* En móvil el degradado cubre arriba a abajo para leer bien el texto */
     background: 
       linear-gradient(
         180deg, 
@@ -498,7 +474,6 @@ body {
     font-size: 1.2rem;
   }
 
-  /* Las tarjetas cambian a formato de lista vertical muy cómoda para el pulgar */
   .hero-features {
     display: flex;
     flex-direction: column;
@@ -526,8 +501,6 @@ body {
     font-size: 0.9375rem;
   }
 
-
-  /* Los botones ocupan todo el ancho en celulares */
   .hero-buttons {
     flex-direction: column;
     width: 100%;
@@ -556,13 +529,11 @@ body {
   align-items: start;
 }
 
-/* MARCO MÁS SUAVE CON DEGRADADO Y BORDES REDONDEADOS */
 .about-image-wrapper {
   position: relative;
-  /* Fondo degradado azul a transparente hacia la derecha/inferior */
   background: linear-gradient(135deg, #033266 0%, #033266 40%, rgba(125, 194, 66, 0.4) 80%, transparent 100%);
   padding: 12px;
-  border-radius: 28px; /* Bordes superiores e inferiores estilizados sin esquinas duras */
+  border-radius: 28px; 
 }
 
 .image-placeholder {
@@ -589,7 +560,6 @@ body {
   object-fit: cover;
 }
 
-/* TARJETA REPRESENTANTE */
 .representative-card {
   margin-top: 40px;
   background: linear-gradient(90deg, #033266, #07192d);
@@ -672,7 +642,6 @@ body {
 .text-blue { color: #033266; }
 .text-green { color: #7dc242; }
 
-/* PÁRRAFOS COMPLETAMENTE JUSTIFICADOS */
 .about-text {
   color: #475569;
   font-size: 0.95rem;
@@ -680,7 +649,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* PILARES INFERIORES CON PÁRRAFOS JUSTIFICADOS */
 .about-pillars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -729,7 +697,7 @@ body {
 ========================================== */
 @media (max-width: 992px) {
   .about-container {
-    grid-template-columns: 1fr; /* Pasa a 1 columna en tabletas/móviles */
+    grid-template-columns: 1fr; 
     gap: 35px;
     padding-left: 15px;
     padding-right: 15px
@@ -742,7 +710,7 @@ body {
 
 @media (max-width: 768px) {
   .about-pillars {
-    grid-template-columns: 1fr; /* Pilares apilados verticalmente en móviles */
+    grid-template-columns: 1fr; 
     gap: 20px;
   }
 
@@ -755,10 +723,9 @@ body {
     margin-bottom: 10px;
   }
 
-  /* Para legibilidad cómoda en pantallas muy angostas */
   .about-text, 
   .pillar-item p {
-    align-items: center; /* Alineado a la izquierda en pantallas de celular para evitar huecos entre palabras */
+    align-items: center; 
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -780,8 +747,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   box-sizing: border-box;
-
-  /* Fondo con la imagen y el velo grisáceo oscuro */
   border-radius: 24px;
   padding: 60px 40px;
   background: linear-gradient(rgba(10, 25, 48, 0.45), rgba(10, 25, 45, 0.55)), url('imagenes.img/edificio.jpg');
@@ -791,7 +756,6 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Tarjetas semitransparentes (Glassmorphism) */
 .mv-card {
   background: rgba(10, 25, 45, 0.4) !important;
   backdrop-filter: blur(3px);
@@ -806,7 +770,6 @@ body {
   flex-direction: column;
 }
 
-/* Contenedor del icono */
 .mv-icon-wrapper {
   width: 60px;
   height: 60px;
@@ -820,7 +783,6 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Etiquetas e Identificadores */
 .mv-tag {
   font-size: 0.75rem;
   font-weight: 700;
@@ -846,7 +808,6 @@ body {
   text-align: left;
 }
 
-/* Ajustes Responsive */
 @media (max-width: 768px) {
   .mision-vision-container {
     width: 90%;
@@ -942,17 +903,16 @@ body {
   position: relative;
 }
 
-/* Clases preparadas para agregar tus imágenes */
 .img-construccion {
-  background-image: url('imagenes.img/portafolio1.jpg'); /* <-- Agrega tu imagen aquí */
+  background-image: url('imagenes.img/portafolio1.jpg'); 
 }
 
 .img-camaras {
-  background-image: url('imagenes.img/portafolio2.jpg'); /* <-- Agrega tu imagen aquí */
+  background-image: url('imagenes.img/portafolio2.jpg'); 
 }
 
 .img-mantenimiento {
-  background-image: url('imagenes.img/portafolio3.jpg'); /* <-- Agrega tu imagen aquí */
+  background-image: url('imagenes.img/portafolio3.jpg'); 
 }
 
 .card-icon {
@@ -992,36 +952,29 @@ body {
    ========================================================================== */
 @media (max-width: 992px) {
   
-  /* 1. El contenedor principal pasa de 2 columnas a 1 sola columna vertical */
   .services-container {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  /* 2. Centramos el texto informativo y el botón para que se vea equilibrado en móvil */
   .services-info {
     text-align: center;
   }
 
   .services-info p {
-    text-align: center; /* O justify si prefieres */
+    text-align: center;
   }
 
   .btn-primary {
     margin-top: 20px;
   }
 
-  /* 3. Las tarjetas (.cards-grid) pasan de 3 columnas a 1 sola columna vertical */
   .cards-grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }
 
 }
-
-/* ==========================================================
-   SECCIÓN PROCESO DE TRABAJO
-   ========================================================== */
 
 /* ==========================================================
    SECCIÓN CÓMO TRABAJAMOS (CON CONTENEDOR Y FONDO RODANTE)
@@ -1031,30 +984,25 @@ body {
   padding: 40px 20px;
 }
 
-/* Contenedor que abraza toda el área con esquinas redondeadas y la foto de fondo */
 .proceso-wrapper-fondo {
   max-width: 1240px;
   margin: 0 auto;
-  border-radius: 24px; /* Esquinas redondeadas idénticas a tu referencia */
+  border-radius: 24px; 
   padding: 60px 40px;
-  
-  /* Efecto de la imagen de fondo con un filtro oscuro encima (overlay) para que resalte el texto */
   background: linear-gradient(rgba(10, 25, 48, 0.65), rgba(10, 25, 45, 0.55)), url('imagenes.img/edificio.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Esto hace que la imagen ruede/se mueva sutilmente al hacer scroll hacia arriba y abajo */
+  background-attachment: fixed; 
   
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
-
-/* Textos del encabezado en blanco y gris claro para destacar sobre el fondo oscuro */
 .proceso-header {
   text-align: center;
   margin-bottom: 40px;
 }
 
 .proceso-header .subtitulo-verde {
-  color: #28a745; /* Tu verde corporativo */
+  color: #28a745; 
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
@@ -1063,20 +1011,19 @@ body {
 }
 
 .proceso-header h2 {
-  color: #ffffff; /* Título en blanco impecable */
+  color: #ffffff; 
   font-size: 34px;
   font-weight: 800;
   margin-bottom: 12px;
 }
 
 .proceso-header p {
-  color: #cbd5e1; /* Gris claro muy elegante */
+  color: #cbd5e1; 
   font-size: 18px;
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* Tarjetas de proceso con su fondo blanco, alineación izquierda y sombra verde */
 .proceso-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1106,8 +1053,8 @@ body {
 .paso-numero {
   width: 45px;
   height: 45px;
-  background: rgba(255, 255, 255, 0.15); /* Cuadro semitransparente */
-  color: #ffffff !important;            /* Número blanco brillante */
+  background: rgba(255, 255, 255, 0.15); 
+  color: #ffffff !important;            
   font-weight: 700;
   font-size: 20px;
   border-radius: 12px;
@@ -1115,28 +1062,25 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  border-bottom: 3px solid #28a745;     /* Detalle verde corporativo */
+  border-bottom: 3px solid #28a745;     
 }
 
-/* Título de la tarjeta (Visita y diagnóstico, etc.) */
 .proceso-card h3 {
-  color: #ffffff !important;            /* Título completamente blanco */
+  color: #ffffff !important;           
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
   text-align: left;
 }
 
-/* Párrafo explicativo dentro de la tarjeta */
 .proceso-card p {
-  color: #ffffff !important;            /* Párrafo completamente blanco */
+  color: #ffffff !important;           
   font-size: 16px;
   line-height: 1.6;
   text-align: left;
-  opacity: 0.92;                         /* Leve suavizado para una lectura descansada */
+  opacity: 0.92;                        
 }
 
-/* Grid de Tarjetas */
 .proceso-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1148,7 +1092,7 @@ body {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   padding: 30px 24px;
-  border-radius: 16px; /* Mismo redondeado que las tarjetas del portafolio */
+  border-radius: 16px;
   box-shadow: 0 8px 24px rgba(40, 167, 69, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -1157,7 +1101,7 @@ body {
 .paso-numero {
   width: 45px;
   height: 45px;
-  background: #0d233a; /* Azul corporativo */
+  background: #0d233a; 
   color: #ffffff;
   font-weight: 700;
   font-size: 16px;
@@ -1166,7 +1110,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  border-bottom: 3px solid #28a745; /* Detalle en verde */
+  border-bottom: 3px solid #28a745; 
   margin-left: 0;
 }
 
@@ -1174,10 +1118,8 @@ body {
    MEDIA QUERIES PARA DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
    ========================================================== */
 
-/* Para pantallas menores a 992px (Tablets y celulares grandes) */
 @media screen and (max-width: 992px) {
   
-  /* El grid de la sección de procesos pasa de 4 columnas a 2 columnas */
   .proceso-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -1189,19 +1131,16 @@ body {
   }
 }
 
-/* Para pantallas menores a 768px (Celulares estándar) */
 @media screen and (max-width: 768px) {
   
-  /* Las tarjetas del proceso y del portafolio quedan una debajo de la otra (1 sola columna) */
   .proceso-grid, 
-  .portafolio-grid, /* Asegúrate de que esta clase coincida con la de tu portafolio */
+  .portafolio-grid, 
   .servicios-grid {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 0 10px;
   }
 
-  /* Ajustamos los títulos principales para que no se salgan de la pantalla en celulares */
   .proceso-header h2, 
   h2 {
     font-size: 26px;
@@ -1213,14 +1152,12 @@ body {
     padding: 0 15px;
   }
 
-  /* Aseguramos que las tarjetas tengan un ancho seguro que no desborde */
   .proceso-card, 
   .card {
     width: 100%;
-    box-sizing: border-box; /* Evita que los paddings empujen el contenido hacia afuera */
+    box-sizing: border-box; 
   }
 }
-
 
 /* ============================================ */
 /* SECCIÓN TESTIMONIOS                          */
@@ -1267,7 +1204,7 @@ body {
 }
 
 .testimonial-card .stars {
-  color: #f59e0b; /* Color dorado para las 5 estrellas */
+  color: #f59e0b;
   font-size: 0.9rem;
   margin-bottom: 15px;
 }
@@ -1290,8 +1227,8 @@ body {
 .client-avatar {
   width: 42px;
   height: 42px;
-  background: #07192d; /* Azul Navy corporativo */
-  color: #7dc242;     /* Verde Lima corporativo */
+  background: #07192d; 
+  color: #7dc242;    
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1311,7 +1248,6 @@ body {
   color: #64748b;
 }
 
-/* Adaptación responsive para celulares y tablets */
 @media (max-width: 992px) {
   .testimonials {
     padding: 60px 20px;
@@ -1344,10 +1280,9 @@ body {
   border: 1px solid rgba(7, 25, 45, 0.06);
 }
 
-/* --- COLUMNA IZQUIERDA (OSCURA) --- */
 .why-us-card {
-  background-color: #07192d; /* Azul Navy corporativo */
-  padding: 50px 40px 0 40px;  /* Sin padding abajo para que la imagen se acomode al borde */
+  background-color: #07192d; 
+  padding: 50px 40px 0 40px;  
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -1381,40 +1316,38 @@ body {
 }
 
 .why-list li i {
-  color: #7dc242; /* Verde Lima corporativo para los checkmarks */
+  color: #7dc242; 
   font-size: 1.2rem;
 }
 
-/* --- AJUSTE DE LA TARJETA AZUL PADRE --- */
 .why-us-card {
   background-color: #07192d;
-  padding: 40px 0 0 0; /* Padding en 0 abajo y a los lados para que pegue al borde */
+  padding: 40px 0 0 0; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  overflow: hidden;    /* Mantiene las esquinas redondeadas limpias */
+  overflow: hidden;    
 }
 
 .why-us-content {
-  padding: 0 40px;     /* El padding interno solo para el título y la lista */
+  padding: 0 40px;    
 }
 
-/* --- CONTENEDOR DE LA IMAGEN EN LA PARTE INFERIOR --- */
 .why-us-image-box {
   margin-top: 5px;
   width: 100%;
-  line-height: 0;      /* Elimina espacios blancos fantasma debajo */
+  line-height: 0;      
   overflow: hidden;
 }
 
 .camera-tech-img {
-  width: 100%;         /* Ocupa todo el ancho disponible */
-  height: 300px;       /* Altura perfecta para que abarque la base */
-  object-fit: cover;   /* Estira la foto para cubrir de borde a borde sin deformar */
+  width: 100%;         
+  height: 300px;      
+  object-fit: cover;   
   object-position: 50% 35%;
   display: block;
-  opacity: 1;          /* Opcional: 1 para máxima claridad o 0.95 */
+  opacity: 1;          
 }
 
 /* --- COLUMNA DERECHA (FORMULARIO) --- */
@@ -1474,7 +1407,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
   background-color: #ffffff;
-  border-color: #7dc242; /* Borde verde lima al hacer clic */
+  border-color: #7dc242; 
   box-shadow: 0 0 0 3px rgba(125, 194, 66, 0.2);
 }
 
@@ -1483,8 +1416,8 @@ body {
   width: 100%;
   padding: 15px;
   margin-top: 15px;
-  background-color: #7dc242; /* Verde Lima */
-  color: #07192d;            /* Texto Azul Navy oscuro para legibilidad */
+  background-color: #7dc242; 
+  color: #07192d;            
   border: none;
   border-radius: 10px;
   font-size: 1.05rem;
@@ -1520,31 +1453,28 @@ body {
 }
 
 .form-footer-slogan i {
-  color: #7dc242; /* Verde Lima corporativo */
+  color: #7dc242; 
   font-size: 1.2rem;
   font-style: normal;
 }
 
 @media (max-width: 992px) {
   .split-container {
-    grid-template-columns: 1fr; /* Una sola columna en teléfonos */
+    grid-template-columns: 1fr; 
   }
 
-  /* El padding abajo y a los lados en 0 para que la imagen pegue al borde */
   .why-us-card {
     padding: 40px 0 0 0; 
   }
 
-  /* Aseguramos que el texto mantenga su margen lateral de 25px en móvil */
   .why-us-content {
     padding: 0 25px; 
   }
 
-  /* La imagen sigue ocupando el 100% sin encogerse */
   .camera-tech-img {
     width: 100%;
-    max-width: 100%; /* Quitamos los 180px para que encaje completa */
-    height: 180px;   /* Un alto adecuado para pantallas de teléfono */
+    max-width: 100%; 
+    height: 180px;   
   }
 
   .contact-form-card {
@@ -1556,8 +1486,8 @@ body {
   }
 
   .form-footer-slogan {
-    margin-top: 15px; /* Un poco menos de margen superior en pantallas pequeñas */
-    font-size: 0.85rem; /* Ligeramente más compacto para que luzca bien en móvil */
+    margin-top: 15px; 
+    font-size: 0.85rem; 
   }
 }
 
@@ -1571,7 +1501,7 @@ body {
 }
 
 .main-footer {
-  background-color: #07192d; /* Azul Navy institucional */
+  background-color: #07192d; 
   color: #ffffff;
   max-width: 1240px;
   margin: 40px auto;
@@ -1593,7 +1523,6 @@ body {
   align-items: start;
 }
 
-/* Columna Marca / Logo */
 .footer-logo {
   max-width: 335px;
   width: 100%;
@@ -1601,8 +1530,7 @@ body {
   margin-top: 0;
   margin-bottom: 10px;
   display: block;
-  background: transparent; /* Fondo 100% transparente sin manchas */
-  /* Delineado blanco ultra fino de 1px exacto pegado a las letras */
+  background: transparent; 
   filter: 
     drop-shadow(1px 0 0 #ffffff) 
     drop-shadow(-1px 0 0 #ffffff) 
@@ -1620,7 +1548,6 @@ body {
   max-width: 340px;
 }
 
-/* Títulos de sección */
 .footer-title {
   color: #ffffff;
   font-size: 1.1rem;
@@ -1631,7 +1558,6 @@ body {
   padding-bottom: 8px;
 }
 
-/* Línea Verde Lima debajo del título (igual a la foto de referencia) */
 .footer-title::after {
   content: '';
   position: absolute;
@@ -1643,7 +1569,6 @@ body {
   border-radius: 2px;
 }
 
-/* Enlaces de Navegación */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -1663,7 +1588,7 @@ body {
 
 .footer-links a:hover {
   color: #7dc242;
-  padding-left: 5px; /* Efecto sutil al pasar el mouse */
+  padding-left: 5px; 
 }
 
 /* Información de Contacto */
@@ -1678,7 +1603,6 @@ body {
   color: #ffffff;
 }
 
-/* Íconos de Redes Sociales Circulares */
 .footer-socials {
   display: flex;
   gap: 12px;
@@ -1718,7 +1642,6 @@ body {
   margin-bottom: 0;
 }
 
-/* --- ADAPTACIÓN RESPONSIVA (CELULARES Y TABLETS) --- */
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: 1fr;
