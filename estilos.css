@@ -105,77 +105,6 @@ body {
 }
 
 /* ==========================================================
-   2. ENCABEZADO Y BARRA DE NAVEGACIÓN (RESPONSIVE)
-   ========================================================== */
-
-@media (max-width: 992px) {
-  
-  /* Ajuste de tamaño del logo */
-  .logo-img {
-    height: 55px;
-    max-width: 200px;
-  }
-
-  .hamburger-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .hamburger-btn span {
-    width: 100%;
-    height: 3px;
-    background-color: var(--text-dark);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--white);
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    display: none;
-  }
-
-  .nav-menu.active {
-    display: flex; 
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-
-  .btn-whatsapp-nav {
-    width: 80%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-img {
-    height: 48px;
-    max-width: 170px;
-  }
-}
-
-/* ==========================================================
    BARRA DE NAVEGACIÓN Y MENÚ HAMBURGUESA
    ========================================================== */
 
@@ -201,6 +130,10 @@ body {
   transition: all 0.3s ease;
 }
 
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
 @media (max-width: 992px) {
   
   .hamburger-btn {
@@ -208,27 +141,34 @@ body {
   }
 
   .logo-img {
-    height: 50px;
-    max-width: 180px;
+    height: 58px;
+    max-width: 210px;
+    width: auto;
   }
 
-  .nav-menu {
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    width: 100%;
-    background-color: var(--white);
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    display: none; 
-    z-index: 1000;
-  }
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  display: flex !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-10px) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 1000;
+}
 
-  .nav-menu.active {
-    display: flex !important;
-  }
+.nav-menu.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
 
   .nav-menu ul {
     flex-direction: column;
@@ -244,6 +184,38 @@ body {
     max-width: 250px;
     justify-content: center;
     padding: 12px 20px;
+  }
+
+  .btn-whatsapp-nav,
+  .whatsapp-btn,
+  .btn-whatsapp {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    padding: 0 !important;
+    font-size: 0 !important; 
+    color: transparent !important; 
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #25d366 !important;
+  }
+
+  .btn-whatsapp-nav i,
+  .whatsapp-btn i,
+  .btn-whatsapp i,
+  .btn-whatsapp-nav svg,
+  .whatsapp-btn svg {
+    font-size: 1.3rem !important;
+    margin: 0 auto !important;
+    display: inline-block !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    visibility: visible !important;
+    transform: translateX(2px);
   }
 }
 
@@ -708,7 +680,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .about-pillars {
     grid-template-columns: 1fr; 
     gap: 20px;
@@ -723,12 +695,50 @@ body {
     margin-bottom: 10px;
   }
 
-  .about-text, 
-  .pillar-item p {
+  .about-title,
+  .text-blue,
+  .text-green {
     align-items: center; 
+    text-align: center;
+  }
+
+  .section-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .pillar-item {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+  .pillar-icon {
+    margin: 0 auto 15px auto !important;
+}
+
+  .pillar-item h4 {
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
   }
+
+  .pillar-item p,
+  .about-text {
+    text-align: center !important;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  } 
 }
 
 /* ==========================================================
@@ -942,11 +952,6 @@ body {
   font-weight: 700;
 }
 
-.card-content p {
-  font-size: 0.85rem;
-  color: #64748b;
-}
-
 /* ==========================================================================
    RESPONSIVE SECCIÓN SERVICIOS (MÓVIL Y TABLET)
    ========================================================================== */
@@ -974,6 +979,9 @@ body {
     gap: 25px;
   }
 
+  .card-content h3 {
+    text-align: center;
+  }
 }
 
 /* ==========================================================
