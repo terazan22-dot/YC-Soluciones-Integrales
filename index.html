@@ -228,9 +228,9 @@
           <a href="#contacto" class="btn btn-primary">Conoce más &rarr;</a>
         </div>
         
-        <div class="cards-grid">
+        <div class="cards-grid"> 
           <!-- Tarjeta 1 -->
-          <article class="card">
+          <article class="card" onclick="abrirModal()" style="cursor: pointer;">
             <div class="card-img img-construccion">
               <div class="card-icon"><i class="fa-solid fa-house"></i></div>
             </div>
@@ -240,7 +240,7 @@
           </article>
 
           <!-- Tarjeta 2 -->
-          <article class="card">
+          <article class="card" onclick="abrirModal()" style="cursor: pointer;">
             <div class="card-img img-camaras">
               <div class="card-icon"><i class="fa-solid fa-video"></i></div>
             </div>
@@ -250,7 +250,7 @@
           </article>
 
           <!-- Tarjeta 3 -->
-          <article class="card">
+          <article class="card" onclick="abrirModal()" style="cursor: pointer;">
             <div class="card-img img-mantenimiento">
               <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
             </div>
@@ -260,7 +260,20 @@
           </article>
         </div>
       </div>
-    </section>
+          <!-- MODAL DE ÁREA EN CONSTRUCCIÓN (YC OBRAS) -->
+<div id="modal-construccion" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" onclick="cerrarModal()">&times;</button>
+    <div class="modal-icon">
+      <i class="fa-solid fa-hard-hat"></i>
+    </div>
+    <span class="modal-badge">PRÓXIMAMENTE</span>
+    <h2>Área en construcción</h2>
+    <p>Estamos preparando la galería de proyectos detallada para esta sección. ¡Muy pronto podrás explorar todos los detalles y fotos de nuestras obras!</p>
+    <button class="modal-btn" onclick="cerrarModal()">Entendido</button>
+  </div>
+</div>
+</section>
 
   <section class="proceso-seccion" id="proceso">
   <!-- Contenedor general que abraza toda el área -->
