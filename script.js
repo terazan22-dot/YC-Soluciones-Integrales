@@ -99,3 +99,25 @@ if (hamburgerBtn && navMenu) {
     });
   });
 }
+
+// Modal de Área en Construcción
+function abrirModal() {
+  const modal = document.getElementById('modal-construccion');
+  if (modal) {
+    modal.classList.add('active');
+  }
+}
+
+function cerrarModal() {
+  const modal = document.getElementById('modal-construccion');
+  if (modal) {
+    modal.classList.remove('active');
+  }
+}
+
+window.addEventListener('click', function(e) {
+  const modal = document.getElementById('modal-construccion');
+  if (e.target === modal) {
+    cerrarModal();
+  }
+});
