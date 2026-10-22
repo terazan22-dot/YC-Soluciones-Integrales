@@ -952,6 +952,157 @@ body {
   font-weight: 700;
 }
 
+/* ==========================================
+   ESTILOS MODAL YC OBRAS (ÁREA EN CONSTRUCCIÓN)
+   ========================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  padding: 15px; 
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+  border-top: 5px solid var(--lime-green, #7dc242);
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: var(--navy-blue, #033266);
+}
+
+.modal-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(125, 194, 66, 0.15);
+  color: var(--lime-green, #7dc242);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 15px auto;
+}
+
+.modal-badge {
+  display: inline-block;
+  background: var(--navy-blue, #033266);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.modal-content h2 {
+  color: var(--navy-blue, #033266);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.modal-content p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.modal-btn {
+  background: linear-gradient(90deg, #033266, #7dc242);
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+}
+
+/* ------------------------------------------
+   AJUSTES RESPONSIVE
+   ------------------------------------------ */
+@media (max-width: 992px) {
+  .modal-content {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .modal-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.35rem;
+  }
+
+  .modal-content p {
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+  }
+
+  .modal-btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+  
+  .modal-close {
+    top: 10px;
+    right: 15px;
+  }
+}
+
 /* ==========================================================================
    RESPONSIVE SECCIÓN SERVICIOS (MÓVIL Y TABLET)
    ========================================================================== */
